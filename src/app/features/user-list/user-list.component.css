@@ -1,0 +1,136 @@
+:host {
+  --primary-color: #75028a; 
+  --secondary-color: #D81B60; 
+  --background-color: #F9F9F9;
+  --card-color: #FFFFFF;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+}
+
+.header-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* الشبكة */
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 24px;
+  padding: 24px;
+  background-color: var(--background-color);
+}
+
+/* تصميم الكروت */
+.user-card {
+  background-color: var(--card-color);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  transition: transform 0.2s ease;
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.user-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border-color: var(--secondary-color);
+}
+
+/*  الصورة */
+.avatar {
+  width: 64px; /* ✅ تكبير الصورة */
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid var(--secondary-color);
+}
+
+/*  العنوان */
+.card-title-section {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+mat-card-subtitle {
+  font-size: 14px;
+  color: #666;
+}
+
+/* المحتوى */
+mat-card-content p {
+  font-size: 16px;
+  color: #444;
+  padding: 12px;
+}
+
+/*  زر التفاصيل */
+mat-stroked-button {
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+mat-stroked-button:hover {
+  background-color: rgba(216, 27, 96, 0.1);
+}
+/*  شريط البحث */
+.search-bar {
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+mat-form-field {
+  width: 100%;
+  max-width: 400px;
+}
+
+input {
+  font-size: 100px;
+  color: #333;
+}
+
+mat-icon {
+  color: var(--primary-color);
+}
+
+/* ✅ تصميم الكروت */
+.user-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.user-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ✅ الصورة */
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid var(--secondary-color);
+}

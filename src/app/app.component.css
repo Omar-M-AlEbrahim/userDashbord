@@ -1,0 +1,27 @@
+/* تنسيق شريط العنوان */
+.header-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #d14d7e; /* لون افتراضي من Angular Material */
+    color: white;
+  }
+  
+
+  
+  /* تنسيق الشعار */
+  .logo {
+    height: 40px;
+    width: auto;
+    margin-left: 35%;
+  }
+  
+  /* تنسيق عنوان الصفحة */
+  .header-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    flex-grow: 1;
+    text-align: center;
+  }
+  

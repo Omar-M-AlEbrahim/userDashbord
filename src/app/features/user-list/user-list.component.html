@@ -1,0 +1,73 @@
+
+<!--  حقل البحث -->
+<div class="search-bar">
+  <mat-form-field appearance="outline">
+    <mat-icon matPrefix>search</mat-icon>
+    <input matInput
+      placeholder="ابحث عن مستخدم..."
+      [(ngModel)]="searchTerm"
+      (ngModelChange)="applyFilter()" 
+    />
+  </mat-form-field>
+</div>
+
+<!--  اللودر -->
+<div *ngIf="loading$ | async" class="loading-container">
+  <app-loader></app-loader>
+</div>
+
+<!--  رسالة الخطأ -->
+<p *ngIf="error$ | async as error" class="error-message">
+  ⚠️ {{ error }}
+</p>
+
+<!-- الشبكة -->
+<div class="user-grid">
+  <mat-card 
+    *ngFor="let user of filteredUsers$ | async"
+    class="user-card"
+    (click)="openUserDetails(user.id)"
+  >
+    <mat-card-header class="card-header">
+      <img 
+        mat-card-avatar 
+        [src]="user.avatar" 
+        alt="User Avatar"
+        class="avatar"
+      >
+      <div class="card-title-section">
+        <mat-card-title>
+          {{ user.first_name }} {{ user.last_name }}
+        </mat-card-title>
+        <mat-card-subtitle>
+          {{ user.email }}
+        </mat-card-subtitle>
+      </div>
+    </mat-card-header>
+
+    <mat-card-content>
+      <p>
+        <mat-icon color="primary">email</mat-icon>
+        {{ user.email }}
+      </p>
+    </mat-card-content>
+
+    <mat-card-actions align="end">
+      <button mat-stroked-button color="primary">
+        🔎 عرض التفاصيل
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<!-- ✅ الباجينايشن -->
+<mat-paginator
+  [length]="totalUsers"
+  [pageSize]="pageSize"
+  [pageIndex]="pageIndex"
+  (page)="onPageChange($event)"
+  aria-label="Pagination"
+></mat-paginator>
+
+<!-- ✅ عرض التفاصيل -->
+<!-- <app-user-details *ngIf="selectedUser$ | async"></app-user-details> -->

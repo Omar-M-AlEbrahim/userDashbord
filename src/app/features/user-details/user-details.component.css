@@ -1,0 +1,54 @@
+.user-details-card {
+  background: linear-gradient(135deg, #f3f3f3, #75028a); 
+  margin: 20px auto;
+  padding: 24px;
+  max-width: 500px;
+  border-radius: 16px;
+  box-shadow: none; 
+  border: none;
+}
+
+mat-card {
+  border: none; 
+}
+
+mat-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+
+mat-card-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #212121;
+}
+
+mat-card-subtitle {
+  font-size: 16px;
+  color: #757575;
+}
+
+mat-icon {
+  margin-right: 8px;
+  color: #3f51b5;
+}
+
+mat-flat-button {
+  background-color: #3f51b5;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 10px 20px;
+}
+
+mat-flat-button:hover {
+  background-color: #303f9f;
+}
