@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # UserDashboard
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.1.
@@ -57,3 +58,6 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+=======
+# userDashbord
+>>>>>>> b187312bfc897604ab9f6d24a701d7c99c9fce32
